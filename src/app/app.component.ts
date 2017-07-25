@@ -22,5 +22,10 @@ export class AppComponent {
   day = new Date(1992,3,6);
 
 
+  // custom pipes
+
+  
+
+
 
 }
