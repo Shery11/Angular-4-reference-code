@@ -22,9 +22,12 @@ export class AppComponent {
   day = new Date(1992,3,6);
 
 
-  // custom pipes
+  // template driven forms
+  // automaticaly detects the form and finds its ngModel elemets and gets the data
 
-  
+  onSubmit = function(user){
+    console.log(user);
+  }
 
 
 

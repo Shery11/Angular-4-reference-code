@@ -15,7 +15,7 @@
 
  <ng-template #firstTemp>This is first template</ng-template>
 
- <ng-template #secondTemp>This is first template</ng-template>
+ <ng-template #secondTemp>This is second template</ng-template>
 
   <br>
   <p *ngIf="myName == 'Shery'">True</p>
@@ -46,5 +46,25 @@
 
 <h1>{{arr | sort : 'ascending'}}</h1>
 <h1>{{arr | sort : 'descending'}}</h1>
+
+
+<!-- template driven forms -->
+
+<form #userForm = "ngForm" (ngSubmit) = "onSubmit(userForm.value)">
+
+  <input type="text" name="firstname" placeholder="firstname" ngModel>
+  <br><br>
+  <input type="text" name="lastname" placeholder="lastname" ngModel>
+  <br><br>
+  <select name="language" ngModel>
+    <option value="C++">C++</option>
+    <option value="Jave">Jave</option>
+    <option value="Angular">Angular</option>
+  </select>
+  <br><br>
+
+  <input type="submit" value="submit">
+</form>
+
 </div>
   
