@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {FormGroup , FormControl} from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,19 @@ export class AppComponent {
 
   // template driven forms
   // automaticaly detects the form and finds its ngModel elemets and gets the data
+   form;
+   ngOnInit(){
+   
+     this.form  = new FormGroup({
+   
+     firstname : new FormControl("Shery"),
+     lastname : new FormControl(""),
+     languages : new FormControl(""),
+   
+   });
+   
+   }
+  
 
   onSubmit = function(user){
     console.log(user);

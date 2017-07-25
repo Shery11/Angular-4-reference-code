@@ -48,7 +48,7 @@
 <h1>{{arr | sort : 'descending'}}</h1>
 
 
-<!-- template driven forms -->
+<h1> Template driven forms </h1>
 
 <form #userForm = "ngForm" (ngSubmit) = "onSubmit(userForm.value)">
 
@@ -57,6 +57,26 @@
   <input type="text" name="lastname" placeholder="lastname" ngModel>
   <br><br>
   <select name="language" ngModel>
+    <option value="C++">C++</option>
+    <option value="Jave">Jave</option>
+    <option value="Angular">Angular</option>
+  </select>
+  <br><br>
+
+  <input type="submit" value="submit">
+</form>
+
+<br><br>
+
+<h1> Model driven forms </h1>
+
+<form [formGroup] = "form" (ngSubmit) = "onSubmit(form.value)">
+
+  <input type="text" name="firstname" placeholder="firstname" formControlName="firstname">
+  <br><br>
+  <input type="text" name="lastname" placeholder="lastname" formControlName="lastname">
+  <br><br>
+  <select name="languages" formControlName="languages">
     <option value="C++">C++</option>
     <option value="Jave">Jave</option>
     <option value="Angular">Angular</option>
