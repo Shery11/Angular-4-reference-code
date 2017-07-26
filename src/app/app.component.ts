@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormGroup , FormControl, Validators} from '@angular/forms';
+import {MyDataService} from './my-data.service';
 
 
 @Component({
@@ -8,6 +9,14 @@ import {FormGroup , FormControl, Validators} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+ constructor(private newService: MyDataService){
+
+ }
+
+
+ 
+
   title = 'angular app';
 
   obj = {
@@ -28,6 +37,10 @@ export class AppComponent {
   // automaticaly detects the form and finds its ngModel elemets and gets the data
    form;
    ngOnInit(){
+
+      console.log(this.newService.success());
+      console.log(this.newService.obj);
+
    
      this.form  = new FormGroup({
      // default validations
