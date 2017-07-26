@@ -14,10 +14,7 @@ export class AppComponent {
 
  }
 
-
- 
-
-  title = 'angular app';
+ title = 'angular app';
 
   obj = {
   	id : 123,
@@ -37,6 +34,8 @@ export class AppComponent {
   // automaticaly detects the form and finds its ngModel elemets and gets the data
    form;
    ngOnInit(){
+
+     this.newService.fetchData();
 
       console.log(this.newService.success());
       console.log(this.newService.obj);
